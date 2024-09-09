@@ -1,0 +1,14 @@
+# Diagram: What Happens When You Type google.com in Your Browser and Press Enter
+
+Below is a diagram illustrating the flow of the request created when you type "https://www.google.com" in your browser and press Enter:
+
+- DNS Resolution: The domain name is resolved to an IP address.
+- TCP/IP: A TCP/IP connection is established between the browser and the server.
+- Firewall: The request passes through firewalls to ensure security.
+- HTTPS Encryption: The traffic is encrypted using SSL/TLS for secure communication.
+- Load Balancer: The request is distributed across multiple servers.
+- Web Server: The web server processes the request and serves static content.
+- Application Server: The application server generates dynamic content.
+- Database: The application server retrieves data from the database as needed.
+
+![What Happens When You Type google.com](./pictures/1683553084138.jpeg)

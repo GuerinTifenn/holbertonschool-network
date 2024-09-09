@@ -1,0 +1,39 @@
+# What Happens When You Type google.com in Your Browser and Press Enter
+
+When you type "https://www.google.com" in your browser and press Enter, a series of complex processes takes place, involving multiple systems and protocols. Below is a breakdown of the key steps that happen under the hood:
+
+## 1. DNS Resolution
+When you type "google.com", your browser doesn't initially know the IP address associated with this domain. The first step is **DNS (Domain Name System) resolution**. The browser sends a DNS query to a DNS server, which returns the corresponding IP address (e.g., `172.217.14.206`) for the domain "google.com". This process may involve contacting multiple DNS servers if the IP address is not cached locally or by your Internet Service Provider (ISP).
+
+## 2. TCP/IP Connection
+Once the browser has the IP address, it needs to establish a connection with Google's server. The browser uses the **TCP/IP protocol** to do this. A **TCP (Transmission Control Protocol)** handshake occurs between your computer and the server, which involves three steps:
+- SYN: Your browser sends a request to the server to initiate a connection.
+- SYN-ACK: The server acknowledges and responds.
+- ACK: The browser confirms the receipt and the connection is established.
+
+This handshake occurs over the **IP (Internet Protocol)**, ensuring that the data packets travel correctly across the internet from your computer to the server.
+
+## 3. Firewall
+Before reaching Google's server, your request might pass through various **firewalls**. These firewalls inspect the traffic to ensure it meets certain security policies. They can block or allow traffic based on the rules defined by the network administrators. Firewalls protect both your network and Google's network from malicious traffic.
+
+## 4. HTTPS/SSL Encryption
+Since you're using "https://", the connection is encrypted using **SSL/TLS (Secure Sockets Layer / Transport Layer Security)**. SSL ensures that the data exchanged between your browser and Google's server is encrypted, protecting it from being intercepted by attackers. This encryption is especially important when sensitive data is involved, such as passwords or personal information.
+
+## 5. Load Balancer
+Once the request reaches Google's server, it is distributed through a **load balancer**. Load balancers distribute incoming requests across multiple servers to ensure no single server is overwhelmed by traffic. This enhances both performance and reliability by ensuring redundancy and high availability.
+
+## 6. Web Server
+The load balancer forwards the request to one of Google's **web servers**. The web server is responsible for handling the request, which typically includes serving static content like HTML, CSS, JavaScript, and images.
+
+## 7. Application Server
+For dynamic content, the web server forwards the request to an **application server**. The application server is responsible for processing the logic of the application (e.g., running Google's search algorithms). It executes server-side code to generate dynamic web pages based on the request.
+
+## 8. Database Interaction
+If the request requires data (e.g., search results), the application server communicates with a **database**. The database stores vast amounts of data, and the application server queries the database to fetch the relevant information. Once the data is retrieved, it's sent back to the application server, which then forwards it to the web server.
+
+## 9. Returning the Response
+Finally, the web server sends the generated HTML and other assets (such as CSS and JavaScript files) back to the browser. The browser then renders the page, and you can now see the Google search homepage or the search results you're looking for.
+
+In summary, typing "https://www.google.com" in your browser and pressing Enter triggers a sequence of steps involving DNS resolution, TCP/IP connections, encryption, load balancing, web and application servers, and databases. Each of these components plays a critical role in delivering the content to your browser.
+
+**Blog post published on [Medium/LinkedIn]**: [Link to the blog post]
